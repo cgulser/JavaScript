@@ -1,41 +1,54 @@
-function sum(){
-    var num1=10
-    var num2=20
-    var num3=30
-    var total= num1+num2+num3
-    return total
-}
-console.log(sum())
+// ARRAY DATA EKLEME VE SILME 
 
-// birden fazla parametreli fonksiyon
+var studyList= ['Can','Ece','Ali','Naz']
 
-function information(location, price, rating){
-console.log(`location: ${location}, price: ${price}, rating: ${rating}`)
-}
-information('Berlin','2018','200')
+console.log(studyList);
+console.log(typeof(studyList));
+console.log(studyList.length);
 
-// Fgonksiyonu cagirip yeni bir degiskende saklama
+// push(): Array' in sonuna Data ekler
 
-const mySum= sum() + 100
-console.log(mySum)
+studyList.push('Samet')
+console.log(studyList);
 
-//Fonksiyonu parametre ve return ile cagirma 
+// unshift(): Array' in basina Data ekler
 
-function diff(num1,num2){
-    return num2-num1
-}
-console.log(diff(50,100))
+studyList.unshift('Elif')
+console.log(studyList);
 
-//Fonksiyonlari iki sekilde tanimlayip cagirabiliriz
-//Direk tanimlama ve cagirma 
-//Fonksiyonu bir degisken ile tanimlayip cagirma 
+// pop(): Array' in sonundaki Datayi siler
 
-function square(num){
-    return num*num
-}
-console.log(square(6))
+studyList.pop('Samet')
+console.log(studyList);
 
-const squareOfNumber= function square(num){
-    return num*num
-}
-console.log(squareOfNumber(5))
+// shift(): Array' in basindaki Datayi siler
+
+studyList.shift('Elif')
+console.log(studyList);
+
+// indexOf(item, from)
+
+var ages=[10,20,30,40,50,30,60,40]
+ 
+console.log(ages.indexOf(20));            //1
+console.log(ages.indexOf(30));            //2
+console.log(ages.indexOf(30, 3));         //5
+console.log(ages.indexOf(80));            // return -1 eslesme yok anlaminda 
+
+// lastIdexOf():
+// Sondan baslayarak istenen rakamin index'ini veriri
+
+console.log(ages.lastIndexOf(30));         // 5
+
+// includes(item , starting index)
+
+console.log(ages.includes(60));             // true
+console.log(ages.includes(90));             // false
+
+console.log(ages.includes(40,3));
+
+const isExist = ages.includes(40,3)
+console.log(isExist);
+
+const isExist1 = ages.includes(80,3)
+console.log(isExist1);
